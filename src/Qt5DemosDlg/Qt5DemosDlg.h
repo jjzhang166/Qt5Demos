@@ -17,7 +17,7 @@ public:
     ~Qt5DemosDlg();
 
 private slots:
-    void on_Qt5DemosWidget_itemPressed(QTreeWidgetItem *item, int column);
+    void on_Qt5DemosWidget_itemClicked(QTreeWidgetItem *item, int column);
 
 private:
     Ui::Qt5DemosDlg *ui;

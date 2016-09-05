@@ -12,7 +12,7 @@
 #include <QIcon>
 
 QtSplashWindow::QtSplashWindow(QWidget *parent):QSplashScreen(parent),
-	pix(new QPixmap("./image/power_003.png"))
+	pix(new QPixmap(":/image/power_003.png"))
 {
 //	setPixmap(*pix);
 	QMatrix matrix;

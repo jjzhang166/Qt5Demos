@@ -45,8 +45,10 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = QtSplashWindow.cpp moc_QtSplashWindow.cpp
+SOURCES       = QtSplashWindow.cpp qrc_image.cpp \
+		moc_QtSplashWindow.cpp
 OBJECTS       = QtSplashWindow.o \
+		qrc_image.o \
 		moc_QtSplashWindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
@@ -129,6 +131,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		QtSplashWindow.pro \
+		image.qrc \
 		QtSplashWindow.pro
 QMAKE_TARGET  = QtSplashWindow
 DESTDIR       = ../../build/lib/#avoid trailing-slash linebreak
@@ -270,6 +273,7 @@ Makefile: QtSplashWindow.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		QtSplashWindow.pro \
+		image.qrc \
 		/usr/lib/x86_64-linux-gnu/libQt5Widgets.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Gui.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Core.prl
@@ -355,6 +359,7 @@ Makefile: QtSplashWindow.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf:
 QtSplashWindow.pro:
+image.qrc:
 /usr/lib/x86_64-linux-gnu/libQt5Widgets.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Gui.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Core.prl:
@@ -365,7 +370,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/QtSplashWindow1.0.0 || mkdir -p .tmp/QtSplashWindow1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/QtSplashWindow1.0.0/ && $(COPY_FILE) --parents QtSplashWindow.h .tmp/QtSplashWindow1.0.0/ && $(COPY_FILE) --parents QtSplashWindow.cpp .tmp/QtSplashWindow1.0.0/ && (cd `dirname .tmp/QtSplashWindow1.0.0` && $(TAR) QtSplashWindow1.0.0.tar QtSplashWindow1.0.0 && $(COMPRESS) QtSplashWindow1.0.0.tar) && $(MOVE) `dirname .tmp/QtSplashWindow1.0.0`/QtSplashWindow1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/QtSplashWindow1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/QtSplashWindow1.0.0/ && $(COPY_FILE) --parents image.qrc .tmp/QtSplashWindow1.0.0/ && $(COPY_FILE) --parents QtSplashWindow.h .tmp/QtSplashWindow1.0.0/ && $(COPY_FILE) --parents QtSplashWindow.cpp .tmp/QtSplashWindow1.0.0/ && (cd `dirname .tmp/QtSplashWindow1.0.0` && $(TAR) QtSplashWindow1.0.0.tar QtSplashWindow1.0.0 && $(COMPRESS) QtSplashWindow1.0.0.tar) && $(MOVE) `dirname .tmp/QtSplashWindow1.0.0`/QtSplashWindow1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/QtSplashWindow1.0.0
 
 
 clean:compiler_clean 
@@ -387,8 +392,13 @@ mocables: compiler_moc_header_make_all compiler_moc_source_make_all
 
 check: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_image.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_image.cpp
+qrc_image.cpp: image.qrc \
+		image/power_003.png
+	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name image image.qrc -o qrc_image.cpp
+
 compiler_moc_header_make_all: moc_QtSplashWindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_QtSplashWindow.cpp
@@ -514,7 +524,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_header_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_header_clean 
 
 ####### Compile
 
@@ -635,6 +645,9 @@ QtSplashWindow.o: QtSplashWindow.cpp QtSplashWindow.h \
 		/usr/include/qt5/QtGui/qicon.h \
 		/usr/include/qt5/QtGui/QIcon
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QtSplashWindow.o QtSplashWindow.cpp
+
+qrc_image.o: qrc_image.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_image.o qrc_image.cpp
 
 moc_QtSplashWindow.o: moc_QtSplashWindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_QtSplashWindow.o moc_QtSplashWindow.cpp

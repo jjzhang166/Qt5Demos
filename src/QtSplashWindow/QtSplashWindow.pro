@@ -14,4 +14,5 @@ HEADERS += QtSplashWindow.h
 
 SOURCES += QtSplashWindow.cpp
 
+RESOURCES += image.qrc
 # Directories

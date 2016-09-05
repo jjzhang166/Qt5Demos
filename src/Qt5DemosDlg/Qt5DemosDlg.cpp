@@ -17,6 +17,9 @@ Qt5DemosDlg::Qt5DemosDlg(QWidget *parent) :
     ui(new Ui::Qt5DemosDlg)
 {
     ui->setupUi(this);
+	setWindowTitle("Qt5Demos");
+
+    connect(ui->Qt5DemosWidget,SIGNAL(itemClicked(QTreeWidgetItem*,int)),this,SLOT(on_Qt5DemosWidget_itemClicked(QTreeWidgetItem*,int)));
 }
 
 Qt5DemosDlg::~Qt5DemosDlg()
@@ -24,11 +27,10 @@ Qt5DemosDlg::~Qt5DemosDlg()
     delete ui;
 }
 
-void Qt5DemosDlg::on_Qt5DemosWidget_itemPressed(QTreeWidgetItem *item, int column)
+void Qt5DemosDlg::on_Qt5DemosWidget_itemClicked(QTreeWidgetItem *item, int column)
 {
 	QString itemText;
-    if (item->childCount() == 0)
-    {
+
         itemText = item->text(column);
         if (itemText == "Qt5标准对话框")
         {
@@ -62,12 +64,13 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemPressed(QTreeWidgetItem *item, int colum
 		}
 		else if (itemText == "不规则窗体")
 		{
-			QtShapeWidget *shapeWidget = new QtShapeWidget;
-			shapeWidget->show();
+			QtShapeWidget shapeWidget;
+			shapeWidget.exec();
 		}
 		else if (itemText == "程序启动画面")
 		{
 			QtSplashWindow *splWin = new QtSplashWindow;
+			splWin->setWindowFlags(Qt::Window);
 			splWin->show();
 		}
 		else if (itemText == "图片浏览器")
@@ -80,5 +83,4 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemPressed(QTreeWidgetItem *item, int colum
 			QtWordProcessor *wordPro = new QtWordProcessor(this);
 			wordPro->show();
 		}
-    }
 }

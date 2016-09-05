@@ -6,23 +6,22 @@
  ************************************************************************/
 
 #include "QtShapeWidget.h"
-#include <QPixmap>
 #include <QBitmap>
 #include <QPainter>
 #include <QBrush>
 #include <QPalette>
 
-QtShapeWidget::QtShapeWidget(QWidget * parent):QWidget(parent),
+QtShapeWidget::QtShapeWidget(QWidget * parent):QDialog(parent),
 	dragPositon()
 {
-	QPixmap pix;
-	pix.load("./image/1Whater.png");
-	resize(pix.size());
+	pix = new QPixmap;
+	pix->load(":/image/1Whater.png");
+	resize(pix->size());
 	
 /*	QPalette p = this->palette();
 	p.setBrush(QPalette::Window,QBrush(pix));
 	setPalette(p);*/
-	setMask(QBitmap(pix.mask()));
+	setMask(QBitmap(pix->mask()));
 }
 QtShapeWidget::~QtShapeWidget()
 {
@@ -49,5 +48,5 @@ void QtShapeWidget::mouseMoveEvent(QMouseEvent * event)
 void QtShapeWidget::paintEvent(QPaintEvent *)
 {
 	QPainter painter(this);
-	painter.drawPixmap(0,0,QPixmap("./image/1Whater.png"));
+	painter.drawPixmap(0,0,*pix);
 }

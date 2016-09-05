@@ -45,8 +45,10 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = QtShapeWidget.cpp moc_QtShapeWidget.cpp
+SOURCES       = QtShapeWidget.cpp qrc_image.cpp \
+		moc_QtShapeWidget.cpp
 OBJECTS       = QtShapeWidget.o \
+		qrc_image.o \
 		moc_QtShapeWidget.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
@@ -129,6 +131,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		QtShapeWidget.pro \
+		image.qrc \
 		QtShapeWidget.pro
 QMAKE_TARGET  = QtShapeWidget
 DESTDIR       = ../../build/lib/#avoid trailing-slash linebreak
@@ -270,6 +273,7 @@ Makefile: QtShapeWidget.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/q
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		QtShapeWidget.pro \
+		image.qrc \
 		/usr/lib/x86_64-linux-gnu/libQt5Widgets.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Gui.prl \
 		/usr/lib/x86_64-linux-gnu/libQt5Core.prl
@@ -355,6 +359,7 @@ Makefile: QtShapeWidget.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/q
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf:
 QtShapeWidget.pro:
+image.qrc:
 /usr/lib/x86_64-linux-gnu/libQt5Widgets.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Gui.prl:
 /usr/lib/x86_64-linux-gnu/libQt5Core.prl:
@@ -365,7 +370,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/QtShapeWidget0.0.1 || mkdir -p .tmp/QtShapeWidget0.0.1
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/QtShapeWidget0.0.1/ && $(COPY_FILE) --parents QtShapeWidget.h .tmp/QtShapeWidget0.0.1/ && $(COPY_FILE) --parents QtShapeWidget.cpp .tmp/QtShapeWidget0.0.1/ && (cd `dirname .tmp/QtShapeWidget0.0.1` && $(TAR) QtShapeWidget0.0.1.tar QtShapeWidget0.0.1 && $(COMPRESS) QtShapeWidget0.0.1.tar) && $(MOVE) `dirname .tmp/QtShapeWidget0.0.1`/QtShapeWidget0.0.1.tar.gz . && $(DEL_FILE) -r .tmp/QtShapeWidget0.0.1
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/QtShapeWidget0.0.1/ && $(COPY_FILE) --parents image.qrc .tmp/QtShapeWidget0.0.1/ && $(COPY_FILE) --parents QtShapeWidget.h .tmp/QtShapeWidget0.0.1/ && $(COPY_FILE) --parents QtShapeWidget.cpp .tmp/QtShapeWidget0.0.1/ && (cd `dirname .tmp/QtShapeWidget0.0.1` && $(TAR) QtShapeWidget0.0.1.tar QtShapeWidget0.0.1 && $(COMPRESS) QtShapeWidget0.0.1.tar) && $(MOVE) `dirname .tmp/QtShapeWidget0.0.1`/QtShapeWidget0.0.1.tar.gz . && $(DEL_FILE) -r .tmp/QtShapeWidget0.0.1
 
 
 clean:compiler_clean 
@@ -387,8 +392,13 @@ mocables: compiler_moc_header_make_all compiler_moc_source_make_all
 
 check: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_image.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_image.cpp
+qrc_image.cpp: image.qrc \
+		image/1Whater.png
+	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name image image.qrc -o qrc_image.cpp
+
 compiler_moc_header_make_all: moc_QtShapeWidget.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_QtShapeWidget.cpp
@@ -516,7 +526,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_header_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_header_clean 
 
 ####### Compile
 
@@ -642,6 +652,9 @@ QtShapeWidget.o: QtShapeWidget.cpp QtShapeWidget.h \
 		/usr/include/qt5/QtGui/QBrush \
 		/usr/include/qt5/QtGui/QPalette
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o QtShapeWidget.o QtShapeWidget.cpp
+
+qrc_image.o: qrc_image.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_image.o qrc_image.cpp
 
 moc_QtShapeWidget.o: moc_QtShapeWidget.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_QtShapeWidget.o moc_QtShapeWidget.cpp

@@ -15,5 +15,6 @@ HEADERS += QtShapeWidget.h
 
 SOURCES += QtShapeWidget.cpp
 
+RESOURCES += image.qrc
 
 # Directories
