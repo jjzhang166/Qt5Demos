@@ -44,8 +44,6 @@ public:
         new QTreeWidgetItem(__qtreewidgetitem);
         new QTreeWidgetItem(__qtreewidgetitem);
         new QTreeWidgetItem(__qtreewidgetitem);
-        new QTreeWidgetItem(__qtreewidgetitem);
-        new QTreeWidgetItem(__qtreewidgetitem);
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(Qt5DemosWidget);
         new QTreeWidgetItem(__qtreewidgetitem1);
         new QTreeWidgetItem(__qtreewidgetitem1);
@@ -82,16 +80,12 @@ public:
         ___qtreewidgetitem6->setText(0, QApplication::translate("Qt5DemosDlg", "\347\224\265\345\255\220\351\222\237", 0));
         QTreeWidgetItem *___qtreewidgetitem7 = ___qtreewidgetitem1->child(5);
         ___qtreewidgetitem7->setText(0, QApplication::translate("Qt5DemosDlg", "\345\217\257\346\211\251\345\261\225\345\257\271\350\257\235\346\241\206", 0));
-        QTreeWidgetItem *___qtreewidgetitem8 = ___qtreewidgetitem1->child(6);
-        ___qtreewidgetitem8->setText(0, QApplication::translate("Qt5DemosDlg", "\344\270\215\350\247\204\345\210\231\347\252\227\344\275\223", 0));
-        QTreeWidgetItem *___qtreewidgetitem9 = ___qtreewidgetitem1->child(7);
-        ___qtreewidgetitem9->setText(0, QApplication::translate("Qt5DemosDlg", "\347\250\213\345\272\217\345\220\257\345\212\250\347\224\273\351\235\242", 0));
-        QTreeWidgetItem *___qtreewidgetitem10 = Qt5DemosWidget->topLevelItem(1);
-        ___qtreewidgetitem10->setText(0, QApplication::translate("Qt5DemosDlg", "Qt5\344\270\273\347\252\227\344\275\223", 0));
-        QTreeWidgetItem *___qtreewidgetitem11 = ___qtreewidgetitem10->child(0);
-        ___qtreewidgetitem11->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\347\211\207\346\265\217\350\247\210\345\231\250", 0));
-        QTreeWidgetItem *___qtreewidgetitem12 = ___qtreewidgetitem10->child(1);
-        ___qtreewidgetitem12->setText(0, QApplication::translate("Qt5DemosDlg", "\346\226\207\345\255\227\345\244\204\347\220\206\345\231\250", 0));
+        QTreeWidgetItem *___qtreewidgetitem8 = Qt5DemosWidget->topLevelItem(1);
+        ___qtreewidgetitem8->setText(0, QApplication::translate("Qt5DemosDlg", "Qt5\344\270\273\347\252\227\344\275\223", 0));
+        QTreeWidgetItem *___qtreewidgetitem9 = ___qtreewidgetitem8->child(0);
+        ___qtreewidgetitem9->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\347\211\207\346\265\217\350\247\210\345\231\250", 0));
+        QTreeWidgetItem *___qtreewidgetitem10 = ___qtreewidgetitem8->child(1);
+        ___qtreewidgetitem10->setText(0, QApplication::translate("Qt5DemosDlg", "\346\226\207\345\255\227\345\244\204\347\220\206\345\231\250", 0));
         Qt5DemosWidget->setSortingEnabled(__sortingEnabled);
 
     } // retranslateUi
