@@ -35,8 +35,7 @@ HEADERS  += \
 FORMS    += \  
     Qt5DemosDlg.ui
 
-LIBS += -L../../build/lib -lQtStdDlgs -lQtProgressBar -lQtClock -lQtExtDlg\
--lQtGeometryDlg -lQtImageView -lQtMainWindow -lQtPalette -lQtProgressBar -lQtShapeWidget -lQtSplashWindow -lQtStdDlgs
+LIBS += -L../../build/lib -lQtStdDlgs -lQtProgressBar -lQtClock -lQtExtDlg -lQtGeometryDlg -lQtImageView -lQtMainWindow -lQtPalette -lQtProgressBar -lQtShapeWidget -lQtSplashWindow -lQtStdDlgs
 
 RURCES += \
     icon.qrc

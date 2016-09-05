@@ -396,14 +396,14 @@ compiler_rcc_make_all: qrc_icon.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_icon.cpp
 qrc_icon.cpp: icon.qrc \
-		icon/rotate-left.png \
+		icon/zoom-in.png \
+		icon/zoom-out.png \
 		icon/quit.svg \
-		icon/rotate-right.png \
 		icon/save.png \
 		icon/open.png \
-		icon/save-as.png \
-		icon/zoom-in.png \
-		icon/zoom-out.png
+		icon/rotate-right.png \
+		icon/rotate-left.png \
+		icon/save-as.png
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name icon icon.qrc -o qrc_icon.cpp
 
 compiler_moc_header_make_all: moc_QtImageView.cpp

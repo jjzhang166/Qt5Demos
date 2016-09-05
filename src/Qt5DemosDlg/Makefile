@@ -2299,6 +2299,9 @@ Qt5DemosDlg.o: Qt5DemosDlg.cpp Qt5DemosDlg.h \
 		/usr/include/qt5/QtGui/qtextformat.h \
 		/usr/include/qt5/QtGui/qpen.h \
 		/usr/include/qt5/QtGui/qtextoption.h \
+		../QtGeometryDlg/QtGeometryDlg.h \
+		/usr/include/qt5/QtGui/QMoveEvent \
+		/usr/include/qt5/QtGui/QResizeEvent \
 		../QtExtDlg/QtExtDlg.h \
 		/usr/include/qt5/QtWidgets/QSlider \
 		../QtClock/QtClock.h \

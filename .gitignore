@@ -1,0 +1,6 @@
+*~
+*.o
+*.so*
+moc_*
+*.a
+!build/lib/

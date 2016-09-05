@@ -26,6 +26,15 @@ MOVE          = mv -f
 SUBTARGETS    =  \
 		sub-src-QtStdDlgs \
 		sub-src-QtProgressBar \
+		sub-src-QtClock \
+		sub-src-QtExtDlg \
+		sub-src-QtGeometryDlg \
+		sub-src-QtImageView \
+		sub-src-QtImageView \
+		sub-src-QtPalette \
+		sub-src-QtShapeWidget \
+		sub-src-QtSplashWindow \
+		sub-src-QtWordProcessor \
 		sub-src-Qt5DemosDlg
 
 
@@ -79,6 +88,231 @@ sub-src-QtProgressBar-install_subtargets: FORCE
 sub-src-QtProgressBar-uninstall_subtargets: FORCE
 	@test -d src/QtProgressBar/ || mkdir -p src/QtProgressBar/
 	cd src/QtProgressBar/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtProgressBar/QtProgressBar.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtClock-qmake_all:  FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile
+	cd src/QtClock/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtClock: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtClock-make_first: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtClock-all: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtClock-clean: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtClock-distclean: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtClock-install_subtargets: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtClock-uninstall_subtargets: FORCE
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtExtDlg-qmake_all:  FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile
+	cd src/QtExtDlg/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtExtDlg: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtExtDlg-make_first: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtExtDlg-all: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtExtDlg-clean: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtExtDlg-distclean: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtExtDlg-install_subtargets: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtExtDlg-uninstall_subtargets: FORCE
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtGeometryDlg-qmake_all:  FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile
+	cd src/QtGeometryDlg/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtGeometryDlg: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtGeometryDlg-make_first: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtGeometryDlg-all: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtGeometryDlg-clean: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtGeometryDlg-distclean: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtGeometryDlg-install_subtargets: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtGeometryDlg-uninstall_subtargets: FORCE
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtImageView-qmake_all:  FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile
+	cd src/QtImageView/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtImageView: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtImageView-make_first: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtImageView-all: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtImageView-clean: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtImageView-distclean: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtImageView-install_subtargets: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtImageView-uninstall_subtargets: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtImageView-qmake_all:  FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile
+	cd src/QtImageView/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtImageView: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtImageView-make_first: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtImageView-all: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtImageView-clean: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtImageView-distclean: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtImageView-install_subtargets: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtImageView-uninstall_subtargets: FORCE
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtPalette-qmake_all:  FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile
+	cd src/QtPalette/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtPalette: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtPalette-make_first: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtPalette-all: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtPalette-clean: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtPalette-distclean: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtPalette-install_subtargets: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtPalette-uninstall_subtargets: FORCE
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtShapeWidget-qmake_all:  FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile
+	cd src/QtShapeWidget/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtShapeWidget: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtShapeWidget-make_first: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtShapeWidget-all: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtShapeWidget-clean: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtShapeWidget-distclean: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtShapeWidget-install_subtargets: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtShapeWidget-uninstall_subtargets: FORCE
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtSplashWindow-qmake_all:  FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile
+	cd src/QtSplashWindow/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtSplashWindow: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtSplashWindow-make_first: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtSplashWindow-all: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtSplashWindow-clean: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtSplashWindow-distclean: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtSplashWindow-install_subtargets: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtSplashWindow-uninstall_subtargets: FORCE
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-QtWordProcessor-qmake_all:  FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile
+	cd src/QtWordProcessor/ && $(MAKE) -f Makefile qmake_all
+sub-src-QtWordProcessor: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-QtWordProcessor-make_first: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-QtWordProcessor-all: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-QtWordProcessor-clean: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-QtWordProcessor-distclean: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-QtWordProcessor-install_subtargets: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-QtWordProcessor-uninstall_subtargets: FORCE
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
 sub-src-Qt5DemosDlg-qmake_all:  FORCE
 	@test -d src/Qt5DemosDlg/ || mkdir -p src/Qt5DemosDlg/
 	cd src/Qt5DemosDlg/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Qt5DemosDlg/Qt5DemosDlg.pro -o Makefile
@@ -257,15 +491,15 @@ subdir.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile subdir.pro
 
-qmake_all: sub-src-QtStdDlgs-qmake_all sub-src-QtProgressBar-qmake_all sub-src-Qt5DemosDlg-qmake_all FORCE
+qmake_all: sub-src-QtStdDlgs-qmake_all sub-src-QtProgressBar-qmake_all sub-src-QtClock-qmake_all sub-src-QtExtDlg-qmake_all sub-src-QtGeometryDlg-qmake_all sub-src-QtImageView-qmake_all sub-src-QtImageView-qmake_all sub-src-QtPalette-qmake_all sub-src-QtShapeWidget-qmake_all sub-src-QtSplashWindow-qmake_all sub-src-QtWordProcessor-qmake_all sub-src-Qt5DemosDlg-qmake_all FORCE
 
-make_first: sub-src-QtStdDlgs-make_first sub-src-QtProgressBar-make_first sub-src-Qt5DemosDlg-make_first FORCE
-all: sub-src-QtStdDlgs-all sub-src-QtProgressBar-all sub-src-Qt5DemosDlg-all FORCE
-clean: sub-src-QtStdDlgs-clean sub-src-QtProgressBar-clean sub-src-Qt5DemosDlg-clean FORCE
-distclean: sub-src-QtStdDlgs-distclean sub-src-QtProgressBar-distclean sub-src-Qt5DemosDlg-distclean FORCE
+make_first: sub-src-QtStdDlgs-make_first sub-src-QtProgressBar-make_first sub-src-QtClock-make_first sub-src-QtExtDlg-make_first sub-src-QtGeometryDlg-make_first sub-src-QtImageView-make_first sub-src-QtImageView-make_first sub-src-QtPalette-make_first sub-src-QtShapeWidget-make_first sub-src-QtSplashWindow-make_first sub-src-QtWordProcessor-make_first sub-src-Qt5DemosDlg-make_first FORCE
+all: sub-src-QtStdDlgs-all sub-src-QtProgressBar-all sub-src-QtClock-all sub-src-QtExtDlg-all sub-src-QtGeometryDlg-all sub-src-QtImageView-all sub-src-QtImageView-all sub-src-QtPalette-all sub-src-QtShapeWidget-all sub-src-QtSplashWindow-all sub-src-QtWordProcessor-all sub-src-Qt5DemosDlg-all FORCE
+clean: sub-src-QtStdDlgs-clean sub-src-QtProgressBar-clean sub-src-QtClock-clean sub-src-QtExtDlg-clean sub-src-QtGeometryDlg-clean sub-src-QtImageView-clean sub-src-QtImageView-clean sub-src-QtPalette-clean sub-src-QtShapeWidget-clean sub-src-QtSplashWindow-clean sub-src-QtWordProcessor-clean sub-src-Qt5DemosDlg-clean FORCE
+distclean: sub-src-QtStdDlgs-distclean sub-src-QtProgressBar-distclean sub-src-QtClock-distclean sub-src-QtExtDlg-distclean sub-src-QtGeometryDlg-distclean sub-src-QtImageView-distclean sub-src-QtImageView-distclean sub-src-QtPalette-distclean sub-src-QtShapeWidget-distclean sub-src-QtSplashWindow-distclean sub-src-QtWordProcessor-distclean sub-src-Qt5DemosDlg-distclean FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-src-QtStdDlgs-install_subtargets sub-src-QtProgressBar-install_subtargets sub-src-Qt5DemosDlg-install_subtargets FORCE
-uninstall_subtargets: sub-src-QtStdDlgs-uninstall_subtargets sub-src-QtProgressBar-uninstall_subtargets sub-src-Qt5DemosDlg-uninstall_subtargets FORCE
+install_subtargets: sub-src-QtStdDlgs-install_subtargets sub-src-QtProgressBar-install_subtargets sub-src-QtClock-install_subtargets sub-src-QtExtDlg-install_subtargets sub-src-QtGeometryDlg-install_subtargets sub-src-QtImageView-install_subtargets sub-src-QtImageView-install_subtargets sub-src-QtPalette-install_subtargets sub-src-QtShapeWidget-install_subtargets sub-src-QtSplashWindow-install_subtargets sub-src-QtWordProcessor-install_subtargets sub-src-Qt5DemosDlg-install_subtargets FORCE
+uninstall_subtargets: sub-src-QtStdDlgs-uninstall_subtargets sub-src-QtProgressBar-uninstall_subtargets sub-src-QtClock-uninstall_subtargets sub-src-QtExtDlg-uninstall_subtargets sub-src-QtGeometryDlg-uninstall_subtargets sub-src-QtImageView-uninstall_subtargets sub-src-QtImageView-uninstall_subtargets sub-src-QtPalette-uninstall_subtargets sub-src-QtShapeWidget-uninstall_subtargets sub-src-QtSplashWindow-uninstall_subtargets sub-src-QtWordProcessor-uninstall_subtargets sub-src-Qt5DemosDlg-uninstall_subtargets FORCE
 
 sub-src-QtStdDlgs-check:
 	@test -d src/QtStdDlgs/ || mkdir -p src/QtStdDlgs/
@@ -273,10 +507,37 @@ sub-src-QtStdDlgs-check:
 sub-src-QtProgressBar-check:
 	@test -d src/QtProgressBar/ || mkdir -p src/QtProgressBar/
 	cd src/QtProgressBar/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtProgressBar/QtProgressBar.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtClock-check:
+	@test -d src/QtClock/ || mkdir -p src/QtClock/
+	cd src/QtClock/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtClock/QtClock.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtExtDlg-check:
+	@test -d src/QtExtDlg/ || mkdir -p src/QtExtDlg/
+	cd src/QtExtDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtExtDlg/QtExtDlg.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtGeometryDlg-check:
+	@test -d src/QtGeometryDlg/ || mkdir -p src/QtGeometryDlg/
+	cd src/QtGeometryDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtGeometryDlg/QtGeometryDlg.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtImageView-check:
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtImageView-check:
+	@test -d src/QtImageView/ || mkdir -p src/QtImageView/
+	cd src/QtImageView/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtImageView/QtImageView.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtPalette-check:
+	@test -d src/QtPalette/ || mkdir -p src/QtPalette/
+	cd src/QtPalette/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtPalette/QtPalette.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtShapeWidget-check:
+	@test -d src/QtShapeWidget/ || mkdir -p src/QtShapeWidget/
+	cd src/QtShapeWidget/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtShapeWidget/QtShapeWidget.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtSplashWindow-check:
+	@test -d src/QtSplashWindow/ || mkdir -p src/QtSplashWindow/
+	cd src/QtSplashWindow/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtSplashWindow/QtSplashWindow.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-QtWordProcessor-check:
+	@test -d src/QtWordProcessor/ || mkdir -p src/QtWordProcessor/
+	cd src/QtWordProcessor/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/QtWordProcessor/QtWordProcessor.pro -o Makefile ) && $(MAKE) -f Makefile check
 sub-src-Qt5DemosDlg-check:
 	@test -d src/Qt5DemosDlg/ || mkdir -p src/Qt5DemosDlg/
 	cd src/Qt5DemosDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Qt5DemosDlg/Qt5DemosDlg.pro -o Makefile ) && $(MAKE) -f Makefile check
-check: sub-src-QtStdDlgs-check sub-src-QtProgressBar-check sub-src-Qt5DemosDlg-check
+check: sub-src-QtStdDlgs-check sub-src-QtProgressBar-check sub-src-QtClock-check sub-src-QtExtDlg-check sub-src-QtGeometryDlg-check sub-src-QtImageView-check sub-src-QtImageView-check sub-src-QtPalette-check sub-src-QtShapeWidget-check sub-src-QtSplashWindow-check sub-src-QtWordProcessor-check sub-src-Qt5DemosDlg-check
 install: install_subtargets  FORCE
 
 uninstall:  uninstall_subtargets FORCE

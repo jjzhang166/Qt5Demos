@@ -62,18 +62,15 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemPressed(QTreeWidgetItem *item, int colum
 		}
 		else if (itemText == "不规则窗体")
 		{
-			QtShapeWidget *shapeWidget = new QtShapeWidget(this);
+			QtShapeWidget *shapeWidget = new QtShapeWidget;
 			shapeWidget->show();
 		}
 		else if (itemText == "程序启动画面")
 		{
-			QtSplashWindow *splWin = new QtSplashWindow(this);
+			QtSplashWindow *splWin = new QtSplashWindow;
 			splWin->show();
 		}
-    }
-	else if (item->childCount() == 1)
-	{
-		if (itemText == "图片浏览器")
+		else if (itemText == "图片浏览器")
 		{
 			QtImageView *imgView = new QtImageView(this);
 			imgView->show();
@@ -83,5 +80,5 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemPressed(QTreeWidgetItem *item, int colum
 			QtWordProcessor *wordPro = new QtWordProcessor(this);
 			wordPro->show();
 		}
-	}
+    }
 }

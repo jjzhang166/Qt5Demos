@@ -5,16 +5,19 @@
 TEMPLATE = lib
 TARGET = QtMainWindow
 DESTDIR = ../../build/lib
+VERSION = 0.0.1
 INCLUDEPATH += .
 CONFIG += qt
 CONFIG += c++11
 QT += core gui widgets
 QT += printsupport
 
-HEADERS += QtWordProcessor.h
+HEADERS += QtWordProcessor.h\
+HandleWidget.h
 
-SOURCES +=	QtWordProcessor.cpp
+SOURCES +=	QtWordProcessor.cpp\
+HandleWidget.cpp
 
-RESOURCES += icon.qrc
+RESOURCES += image.qrc
 
 # Directories
