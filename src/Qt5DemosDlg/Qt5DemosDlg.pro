@@ -30,12 +30,13 @@ HEADERS  += \
 	../QtShapeWidget/QtShapeWidget.h\
 	../QtSplashWindow/QtSplashWindow.h\
 	../QtWordProcessor/QtWordProcessor.h\
+	../Paint/PaintWindow.h\
 	Qt5DemosDlg.h
 
 FORMS    += \  
     Qt5DemosDlg.ui
 
-LIBS += -L../../build/lib -lQtStdDlgs -lQtProgressBar -lQtClock -lQtExtDlg -lQtGeometryDlg -lQtImageView -lQtMainWindow -lQtPalette -lQtProgressBar -lQtShapeWidget -lQtSplashWindow -lQtStdDlgs
+LIBS += -L../../build/lib -lQtStdDlgs -lQtProgressBar -lQtClock -lQtExtDlg -lQtGeometryDlg -lQtImageView -lQtMainWindow -lQtPalette -lQtProgressBar -lQtShapeWidget -lQtSplashWindow -lQtStdDlgs -lPaint
 
 RURCES += \
     icon.qrc
