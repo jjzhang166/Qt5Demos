@@ -5,6 +5,9 @@
     > Created Time: 2016年06月18日 星期六 10时35分07秒
  ************************************************************************/
 
+#ifndef QTEXTDLG_H
+#define QTEXTDLG_H
+
 #include <QDialog>
 #include <QPushButton>
 #include <QLabel>
@@ -39,3 +42,5 @@ class QtExtDlg : public QDialog
 		void slot_showDetail();
 		void slot_ageChanged(int);
 };
+
+#endif //QTEXTDLG_H

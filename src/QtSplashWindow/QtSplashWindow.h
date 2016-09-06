@@ -5,6 +5,9 @@
     > Created Time: 2016年06月18日 星期六 14时02分06秒
  ************************************************************************/
 
+#ifndef QTSPLASHWINDOW_H
+#define QTSPLASHWINDOW_H
+
 #include <QSplashScreen>
 
 class QPixmap;
@@ -18,3 +21,5 @@ class QtSplashWindow:public QSplashScreen
 		QtSplashWindow(QWidget *parent = 0);
 		~QtSplashWindow();
 };
+
+#endif //QTSPLASHWINDOW_H

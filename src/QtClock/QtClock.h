@@ -5,6 +5,9 @@
     > Created Time: 2016年06月18日 星期六 08时08分39秒
  ************************************************************************/
 
+#ifndef QCLOCK_H
+#define QCLOCK_H
+
 #include <QLCDNumber>
 #include <QPoint>
 
@@ -27,3 +30,5 @@ class QtClock : public QLCDNumber
 	public slots:
 		void slot_showTime();
 };
+
+#endif //QCLOCK_H
