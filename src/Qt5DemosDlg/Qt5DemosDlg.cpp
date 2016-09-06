@@ -18,8 +18,6 @@ Qt5DemosDlg::Qt5DemosDlg(QWidget *parent) :
 {
     ui->setupUi(this);
 	setWindowTitle("Qt5Demos");
-
-    connect(ui->Qt5DemosWidget,SIGNAL(itemClicked(QTreeWidgetItem*,int)),this,SLOT(on_Qt5DemosWidget_itemClicked(QTreeWidgetItem*,int)));
 }
 
 Qt5DemosDlg::~Qt5DemosDlg()
