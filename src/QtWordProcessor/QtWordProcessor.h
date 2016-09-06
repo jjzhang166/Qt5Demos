@@ -5,6 +5,9 @@
     > Created Time: 2016年06月18日 星期六 15时07分53秒
  ************************************************************************/
 
+#ifndef QTWORDPROCESSOR_H
+#define QTWORDPROCESSOR_H
+
 #include <QMainWindow>
 #include <QTextEdit>
 //#include <QImage>
@@ -116,3 +119,5 @@ class QtWordProcessor:public QMainWindow
 
 		void slot_setSortList(int);
 };
+
+#endif//QTWORDPROCESSOR_H

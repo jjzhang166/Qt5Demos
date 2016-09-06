@@ -6,6 +6,9 @@
     > Created Time: 2016年06月16日 星期四 13时39分18秒
  ************************************************************************/
 
+#ifndef QTPALETTEDLG_H
+#define QTPALETTEDLG_H
+
 #include <QFrame>
 #include <QDialog>
 #include <QPushButton>
@@ -49,3 +52,4 @@ class QtPaletteDlg : public QDialog
 		void slot_setBasePalette(int);
 		void slot_setTextPalette(int);
 };
+#endif //QTPALETTEDLG_H
