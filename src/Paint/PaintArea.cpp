@@ -35,7 +35,10 @@ void PaintArea::setBrush(QBrush b)
     brush = b;
     update();
 }
-
+const QPen PaintArea::retPen() const
+{
+    return pen;
+}
 void PaintArea::paintEvent(QPaintEvent *)
 {
     QPainter p(this);

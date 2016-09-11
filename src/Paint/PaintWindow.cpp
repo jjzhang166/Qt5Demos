@@ -150,50 +150,41 @@ void PaintWindow::slot_showShape(int value)
 
 void PaintWindow::slot_showPenWidth(int value)
 {
-    QColor color = penColorFrame->palette().color(QPalette::Window);
-    Qt::PenStyle style = Qt::PenStyle(penStyleComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    Qt::PenCapStyle cap = Qt::PenCapStyle(penCapComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    Qt::PenJoinStyle join = Qt::PenJoinStyle(penJoinComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    paintArea->setPen(QPen(color,value,style,cap,join));
+    QPen tmpPen = paintArea->retPen();
+    tmpPen.setWidth(value);
+    paintArea->setPen(tmpPen);
 }
 void PaintWindow::slot_showPenColor()
 {
     QColor color = QColorDialog::getColor(static_cast<int>(Qt::black));
-    penColorFrame->setPalette(QPalette(color));
-    int value = penWidthSpinBox->value();
-    Qt::PenStyle style = Qt::PenStyle(penStyleComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    Qt::PenCapStyle cap = Qt::PenCapStyle(penCapComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-
-    Qt::PenJoinStyle join = Qt::PenJoinStyle(penJoinComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    paintArea->setPen(QPen(color,value,style,cap,join));
+    QPen tmpPen = paintArea->retPen();
+    tmpPen.setColor(color);
+    paintArea->setPen(tmpPen);
 }
 void PaintWindow::slot_showPenStyle(int styleValue)
 {
-    QColor color = penColorFrame->palette().color(QPalette::Window);
-    int value = penWidthSpinBox->value();
     Qt::PenStyle style = Qt::PenStyle(penStyleComboBox->itemData(styleValue,Qt::UserRole).toInt());
-    Qt::PenCapStyle cap = Qt::PenCapStyle(penCapComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    Qt::PenJoinStyle join = Qt::PenJoinStyle(penJoinComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    paintArea->setPen(QPen(color,value,style,cap,join));
+
+    QPen tmpPen = paintArea->retPen();
+    tmpPen.setStyle(style);
+    paintArea->setPen(tmpPen);
 }
 void PaintWindow::slot_showPenCap(int capValue)
 {
-    QColor color = penColorFrame->palette().color(QPalette::Window);
-    int value = penWidthSpinBox->value();
-    Qt::PenStyle style = Qt::PenStyle(penStyleComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
     Qt::PenCapStyle cap = Qt::PenCapStyle(penCapComboBox->itemData(capValue,Qt::UserRole).toInt());
-    Qt::PenJoinStyle join = Qt::PenJoinStyle(penJoinComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    paintArea->setPen(QPen(color,value,style,cap,join));
+
+    QPen tmpPen = paintArea->retPen();
+    tmpPen.setCapStyle(cap);
+    paintArea->setPen(tmpPen);
 }
 
 void PaintWindow::slot_showPenJoin(int joinValue)
 {
-    QColor color = penColorFrame->palette().color(QPalette::Window);
-    int value = penWidthSpinBox->value();
-    Qt::PenStyle style = Qt::PenStyle(penStyleComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
-    Qt::PenCapStyle cap = Qt::PenCapStyle(penCapComboBox->itemData(penStyleComboBox->currentIndex(),Qt::UserRole).toInt());
     Qt::PenJoinStyle join = Qt::PenJoinStyle(penJoinComboBox->itemData(joinValue,Qt::UserRole).toInt());
-    paintArea->setPen(QPen(color,value,style,cap,join));
+
+    QPen tmpPen = paintArea->retPen();
+    tmpPen.setJoinStyle(join);
+    paintArea->setPen(tmpPen);
 }
 
 void PaintWindow::slot_showFillRule()

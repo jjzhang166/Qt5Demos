@@ -26,6 +26,8 @@ public:
     void setPen(QPen);
     void setBrush(QBrush);
     void setFillRule(Qt::FillRule);
+
+    const QPen retPen() const;//返回PaintArea类型中的pen成员，减少代码量
     void paintEvent(QPaintEvent *);
 private:
     Ui::PaintArea *ui;
