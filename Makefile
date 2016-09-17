@@ -36,6 +36,7 @@ SUBTARGETS    =  \
 		sub-src-QtSplashWindow \
 		sub-src-QtWordProcessor \
 		sub-src-Paint \
+		sub-src-Draw \
 		sub-src-Qt5DemosDlg
 
 
@@ -339,6 +340,31 @@ sub-src-Paint-install_subtargets: FORCE
 sub-src-Paint-uninstall_subtargets: FORCE
 	@test -d src/Paint/ || mkdir -p src/Paint/
 	cd src/Paint/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Paint/Paint.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-src-Draw-qmake_all:  FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile
+	cd src/Draw/ && $(MAKE) -f Makefile qmake_all
+sub-src-Draw: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile
+sub-src-Draw-make_first: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile 
+sub-src-Draw-all: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile all
+sub-src-Draw-clean: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile clean
+sub-src-Draw-distclean: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-src-Draw-install_subtargets: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile install
+sub-src-Draw-uninstall_subtargets: FORCE
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile uninstall
 sub-src-Qt5DemosDlg-qmake_all:  FORCE
 	@test -d src/Qt5DemosDlg/ || mkdir -p src/Qt5DemosDlg/
 	cd src/Qt5DemosDlg/ && $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Qt5DemosDlg/Qt5DemosDlg.pro -o Makefile
@@ -517,15 +543,15 @@ subdir.pro:
 qmake: FORCE
 	@$(QMAKE) -o Makefile subdir.pro
 
-qmake_all: sub-src-QtStdDlgs-qmake_all sub-src-QtProgressBar-qmake_all sub-src-QtClock-qmake_all sub-src-QtExtDlg-qmake_all sub-src-QtGeometryDlg-qmake_all sub-src-QtImageView-qmake_all sub-src-QtImageView-qmake_all sub-src-QtPalette-qmake_all sub-src-QtShapeWidget-qmake_all sub-src-QtSplashWindow-qmake_all sub-src-QtWordProcessor-qmake_all sub-src-Paint-qmake_all sub-src-Qt5DemosDlg-qmake_all FORCE
+qmake_all: sub-src-QtStdDlgs-qmake_all sub-src-QtProgressBar-qmake_all sub-src-QtClock-qmake_all sub-src-QtExtDlg-qmake_all sub-src-QtGeometryDlg-qmake_all sub-src-QtImageView-qmake_all sub-src-QtImageView-qmake_all sub-src-QtPalette-qmake_all sub-src-QtShapeWidget-qmake_all sub-src-QtSplashWindow-qmake_all sub-src-QtWordProcessor-qmake_all sub-src-Paint-qmake_all sub-src-Draw-qmake_all sub-src-Qt5DemosDlg-qmake_all FORCE
 
-make_first: sub-src-QtStdDlgs-make_first sub-src-QtProgressBar-make_first sub-src-QtClock-make_first sub-src-QtExtDlg-make_first sub-src-QtGeometryDlg-make_first sub-src-QtImageView-make_first sub-src-QtImageView-make_first sub-src-QtPalette-make_first sub-src-QtShapeWidget-make_first sub-src-QtSplashWindow-make_first sub-src-QtWordProcessor-make_first sub-src-Paint-make_first sub-src-Qt5DemosDlg-make_first FORCE
-all: sub-src-QtStdDlgs-all sub-src-QtProgressBar-all sub-src-QtClock-all sub-src-QtExtDlg-all sub-src-QtGeometryDlg-all sub-src-QtImageView-all sub-src-QtImageView-all sub-src-QtPalette-all sub-src-QtShapeWidget-all sub-src-QtSplashWindow-all sub-src-QtWordProcessor-all sub-src-Paint-all sub-src-Qt5DemosDlg-all FORCE
-clean: sub-src-QtStdDlgs-clean sub-src-QtProgressBar-clean sub-src-QtClock-clean sub-src-QtExtDlg-clean sub-src-QtGeometryDlg-clean sub-src-QtImageView-clean sub-src-QtImageView-clean sub-src-QtPalette-clean sub-src-QtShapeWidget-clean sub-src-QtSplashWindow-clean sub-src-QtWordProcessor-clean sub-src-Paint-clean sub-src-Qt5DemosDlg-clean FORCE
-distclean: sub-src-QtStdDlgs-distclean sub-src-QtProgressBar-distclean sub-src-QtClock-distclean sub-src-QtExtDlg-distclean sub-src-QtGeometryDlg-distclean sub-src-QtImageView-distclean sub-src-QtImageView-distclean sub-src-QtPalette-distclean sub-src-QtShapeWidget-distclean sub-src-QtSplashWindow-distclean sub-src-QtWordProcessor-distclean sub-src-Paint-distclean sub-src-Qt5DemosDlg-distclean FORCE
+make_first: sub-src-QtStdDlgs-make_first sub-src-QtProgressBar-make_first sub-src-QtClock-make_first sub-src-QtExtDlg-make_first sub-src-QtGeometryDlg-make_first sub-src-QtImageView-make_first sub-src-QtImageView-make_first sub-src-QtPalette-make_first sub-src-QtShapeWidget-make_first sub-src-QtSplashWindow-make_first sub-src-QtWordProcessor-make_first sub-src-Paint-make_first sub-src-Draw-make_first sub-src-Qt5DemosDlg-make_first FORCE
+all: sub-src-QtStdDlgs-all sub-src-QtProgressBar-all sub-src-QtClock-all sub-src-QtExtDlg-all sub-src-QtGeometryDlg-all sub-src-QtImageView-all sub-src-QtImageView-all sub-src-QtPalette-all sub-src-QtShapeWidget-all sub-src-QtSplashWindow-all sub-src-QtWordProcessor-all sub-src-Paint-all sub-src-Draw-all sub-src-Qt5DemosDlg-all FORCE
+clean: sub-src-QtStdDlgs-clean sub-src-QtProgressBar-clean sub-src-QtClock-clean sub-src-QtExtDlg-clean sub-src-QtGeometryDlg-clean sub-src-QtImageView-clean sub-src-QtImageView-clean sub-src-QtPalette-clean sub-src-QtShapeWidget-clean sub-src-QtSplashWindow-clean sub-src-QtWordProcessor-clean sub-src-Paint-clean sub-src-Draw-clean sub-src-Qt5DemosDlg-clean FORCE
+distclean: sub-src-QtStdDlgs-distclean sub-src-QtProgressBar-distclean sub-src-QtClock-distclean sub-src-QtExtDlg-distclean sub-src-QtGeometryDlg-distclean sub-src-QtImageView-distclean sub-src-QtImageView-distclean sub-src-QtPalette-distclean sub-src-QtShapeWidget-distclean sub-src-QtSplashWindow-distclean sub-src-QtWordProcessor-distclean sub-src-Paint-distclean sub-src-Draw-distclean sub-src-Qt5DemosDlg-distclean FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-src-QtStdDlgs-install_subtargets sub-src-QtProgressBar-install_subtargets sub-src-QtClock-install_subtargets sub-src-QtExtDlg-install_subtargets sub-src-QtGeometryDlg-install_subtargets sub-src-QtImageView-install_subtargets sub-src-QtImageView-install_subtargets sub-src-QtPalette-install_subtargets sub-src-QtShapeWidget-install_subtargets sub-src-QtSplashWindow-install_subtargets sub-src-QtWordProcessor-install_subtargets sub-src-Paint-install_subtargets sub-src-Qt5DemosDlg-install_subtargets FORCE
-uninstall_subtargets: sub-src-QtStdDlgs-uninstall_subtargets sub-src-QtProgressBar-uninstall_subtargets sub-src-QtClock-uninstall_subtargets sub-src-QtExtDlg-uninstall_subtargets sub-src-QtGeometryDlg-uninstall_subtargets sub-src-QtImageView-uninstall_subtargets sub-src-QtImageView-uninstall_subtargets sub-src-QtPalette-uninstall_subtargets sub-src-QtShapeWidget-uninstall_subtargets sub-src-QtSplashWindow-uninstall_subtargets sub-src-QtWordProcessor-uninstall_subtargets sub-src-Paint-uninstall_subtargets sub-src-Qt5DemosDlg-uninstall_subtargets FORCE
+install_subtargets: sub-src-QtStdDlgs-install_subtargets sub-src-QtProgressBar-install_subtargets sub-src-QtClock-install_subtargets sub-src-QtExtDlg-install_subtargets sub-src-QtGeometryDlg-install_subtargets sub-src-QtImageView-install_subtargets sub-src-QtImageView-install_subtargets sub-src-QtPalette-install_subtargets sub-src-QtShapeWidget-install_subtargets sub-src-QtSplashWindow-install_subtargets sub-src-QtWordProcessor-install_subtargets sub-src-Paint-install_subtargets sub-src-Draw-install_subtargets sub-src-Qt5DemosDlg-install_subtargets FORCE
+uninstall_subtargets: sub-src-QtStdDlgs-uninstall_subtargets sub-src-QtProgressBar-uninstall_subtargets sub-src-QtClock-uninstall_subtargets sub-src-QtExtDlg-uninstall_subtargets sub-src-QtGeometryDlg-uninstall_subtargets sub-src-QtImageView-uninstall_subtargets sub-src-QtImageView-uninstall_subtargets sub-src-QtPalette-uninstall_subtargets sub-src-QtShapeWidget-uninstall_subtargets sub-src-QtSplashWindow-uninstall_subtargets sub-src-QtWordProcessor-uninstall_subtargets sub-src-Paint-uninstall_subtargets sub-src-Draw-uninstall_subtargets sub-src-Qt5DemosDlg-uninstall_subtargets FORCE
 
 sub-src-QtStdDlgs-check:
 	@test -d src/QtStdDlgs/ || mkdir -p src/QtStdDlgs/
@@ -563,10 +589,13 @@ sub-src-QtWordProcessor-check:
 sub-src-Paint-check:
 	@test -d src/Paint/ || mkdir -p src/Paint/
 	cd src/Paint/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Paint/Paint.pro -o Makefile ) && $(MAKE) -f Makefile check
+sub-src-Draw-check:
+	@test -d src/Draw/ || mkdir -p src/Draw/
+	cd src/Draw/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Draw/Draw.pro -o Makefile ) && $(MAKE) -f Makefile check
 sub-src-Qt5DemosDlg-check:
 	@test -d src/Qt5DemosDlg/ || mkdir -p src/Qt5DemosDlg/
 	cd src/Qt5DemosDlg/ && ( test -e Makefile || $(QMAKE) /home/jisiyu/src/Qt/Qt5DemosDir/src/Qt5DemosDlg/Qt5DemosDlg.pro -o Makefile ) && $(MAKE) -f Makefile check
-check: sub-src-QtStdDlgs-check sub-src-QtProgressBar-check sub-src-QtClock-check sub-src-QtExtDlg-check sub-src-QtGeometryDlg-check sub-src-QtImageView-check sub-src-QtImageView-check sub-src-QtPalette-check sub-src-QtShapeWidget-check sub-src-QtSplashWindow-check sub-src-QtWordProcessor-check sub-src-Paint-check sub-src-Qt5DemosDlg-check
+check: sub-src-QtStdDlgs-check sub-src-QtProgressBar-check sub-src-QtClock-check sub-src-QtExtDlg-check sub-src-QtGeometryDlg-check sub-src-QtImageView-check sub-src-QtImageView-check sub-src-QtPalette-check sub-src-QtShapeWidget-check sub-src-QtSplashWindow-check sub-src-QtWordProcessor-check sub-src-Paint-check sub-src-Draw-check sub-src-Qt5DemosDlg-check
 install: install_subtargets  FORCE
 
 uninstall:  uninstall_subtargets FORCE

@@ -82,6 +82,11 @@
 			  <string>图形画板</string>
 		  </property>
 	  </item>
+	  <item>
+		  <property name="text">
+			  <string>绘画</string>
+		  </property>
+	  </item>
      </item>
     </widget>
    </item>
