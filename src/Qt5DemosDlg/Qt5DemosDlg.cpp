@@ -9,7 +9,6 @@
 #include "../QtSplashWindow/QtSplashWindow.h"
 #include "../QtImageView/QtImageView.h"
 #include "../QtWordProcessor/QtWordProcessor.h"
-#include "../Paint/PaintWindow.h"
 #include "../GraphicsItems/MainWindow.h"
 #include "ui_Qt5DemosDlg.h"
 #include <QTreeWidgetItem>
@@ -86,11 +85,11 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemClicked(QTreeWidgetItem *item, int colum
 		QtWordProcessor *wordPro = new QtWordProcessor(this);
 		wordPro->show();
 	}
-	else if (itemText == "图形画板")
+/*	else if (itemText == "图形画板")
 	{
 		PaintWindow *paintWin = new PaintWindow(this);
 		paintWin->show();
-	}
+	}*/
 	else if (itemText == "图元的旋转、缩放等变换")
 	{
 		MainWindow *itemWin = new MainWindow(this);

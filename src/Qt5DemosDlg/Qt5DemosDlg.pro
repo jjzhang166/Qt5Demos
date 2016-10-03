@@ -30,8 +30,6 @@ HEADERS  += \
 	../QtShapeWidget/QtShapeWidget.h\
 	../QtSplashWindow/QtSplashWindow.h\
 	../QtWordProcessor/QtWordProcessor.h\
-	../Paint/PaintWindow.h\
-	../Draw/DrawWindow.h\
 	../GraphicsItems/MainWindow.h\
 	Qt5DemosDlg.h
 
