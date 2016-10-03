@@ -12,4 +12,5 @@ SUBDIRS = src/QtStdDlgs \
 	src/QtWordProcessor\
 	src/Paint\
 	src/Draw\
+	src/GraphicsItems\
 	src/Qt5DemosDlg\

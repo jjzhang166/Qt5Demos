@@ -11,6 +11,7 @@
 #include "../QtWordProcessor/QtWordProcessor.h"
 #include "../Paint/PaintWindow.h"
 #include "../Draw/DrawWindow.h"
+#include "../GraphicsItems/MainWindow.h"
 #include "ui_Qt5DemosDlg.h"
 #include <QTreeWidgetItem>
 
@@ -20,6 +21,8 @@ Qt5DemosDlg::Qt5DemosDlg(QWidget *parent) :
 {
     ui->setupUi(this);
 	setWindowTitle("Qt5Demos");
+
+    //connect(ui->Qt5DemosWidget,SIGNAL(itemClicked(QTreeWidgetItem*,int)),this,SLOT(on_Qt5DemosWidget_itemClicked(QTreeWidgetItem*,int)));
 }
 
 Qt5DemosDlg::~Qt5DemosDlg()
@@ -93,5 +96,10 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemClicked(QTreeWidgetItem *item, int colum
 	{
 		DrawWindow *drawWin = new DrawWindow(this);
 		drawWin->show();
+	}
+	else if (itemText == "图元的旋转、缩放等变换")
+	{
+		MainWindow *itemWin = new MainWindow(this);
+		itemWin->show();
 	}
 }

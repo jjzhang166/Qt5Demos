@@ -77,6 +77,7 @@
         <string>文字处理器</string>
        </property>
       </item>
+<<<<<<< HEAD
 	  <item>
 		  <property name="text">
 			  <string>图形画板</string>
@@ -87,6 +88,11 @@
 			  <string>绘画</string>
 		  </property>
 	  </item>
+      <item>
+       <property name="text">
+        <string>图元的旋转、缩放等变换</string>
+       </property>
+      </item>
      </item>
     </widget>
    </item>
