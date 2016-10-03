@@ -49,6 +49,7 @@ public:
         QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(Qt5DemosWidget);
         new QTreeWidgetItem(__qtreewidgetitem1);
         new QTreeWidgetItem(__qtreewidgetitem1);
+        new QTreeWidgetItem(__qtreewidgetitem1);
         Qt5DemosWidget->setObjectName(QStringLiteral("Qt5DemosWidget"));
         Qt5DemosWidget->header()->setHighlightSections(true);
 
@@ -92,6 +93,8 @@ public:
         ___qtreewidgetitem11->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\347\211\207\346\265\217\350\247\210\345\231\250", 0));
         QTreeWidgetItem *___qtreewidgetitem12 = ___qtreewidgetitem10->child(1);
         ___qtreewidgetitem12->setText(0, QApplication::translate("Qt5DemosDlg", "\346\226\207\345\255\227\345\244\204\347\220\206\345\231\250", 0));
+        QTreeWidgetItem *___qtreewidgetitem13 = ___qtreewidgetitem10->child(2);
+        ___qtreewidgetitem13->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\345\205\203\347\232\204\346\227\213\350\275\254\343\200\201\347\274\251\346\224\276\347\255\211\345\217\230\346\215\242", 0));
         Qt5DemosWidget->setSortingEnabled(__sortingEnabled);
 
     } // retranslateUi

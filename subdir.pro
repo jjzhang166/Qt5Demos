@@ -10,4 +10,5 @@ SUBDIRS = src/QtStdDlgs \
 	src/QtShapeWidget\
 	src/QtSplashWindow\
 	src/QtWordProcessor\
+	src/GraphicsItems\
 	src/Qt5DemosDlg\
