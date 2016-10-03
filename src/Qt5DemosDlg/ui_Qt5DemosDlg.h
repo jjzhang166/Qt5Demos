@@ -49,6 +49,7 @@ public:
         new QTreeWidgetItem(__qtreewidgetitem1);
         new QTreeWidgetItem(__qtreewidgetitem1);
         new QTreeWidgetItem(__qtreewidgetitem1);
+        new QTreeWidgetItem(__qtreewidgetitem1);
         Qt5DemosWidget->setObjectName(QStringLiteral("Qt5DemosWidget"));
         Qt5DemosWidget->header()->setHighlightSections(true);
 
@@ -92,17 +93,7 @@ public:
         ___qtreewidgetitem11->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\345\275\242\347\224\273\346\235\277", 0));
         QTreeWidgetItem *___qtreewidgetitem12 = ___qtreewidgetitem8->child(3);
         ___qtreewidgetitem12->setText(0, QApplication::translate("Qt5DemosDlg", "\347\273\230\347\224\273", 0));
-        QTreeWidgetItem *___qtreewidgetitem8 = ___qtreewidgetitem1->child(6);
-        ___qtreewidgetitem8->setText(0, QApplication::translate("Qt5DemosDlg", "\344\270\215\350\247\204\345\210\231\347\252\227\344\275\223", 0));
-        QTreeWidgetItem *___qtreewidgetitem9 = ___qtreewidgetitem1->child(7);
-        ___qtreewidgetitem9->setText(0, QApplication::translate("Qt5DemosDlg", "\347\250\213\345\272\217\345\220\257\345\212\250\347\224\273\351\235\242", 0));
-        QTreeWidgetItem *___qtreewidgetitem10 = Qt5DemosWidget->topLevelItem(1);
-        ___qtreewidgetitem10->setText(0, QApplication::translate("Qt5DemosDlg", "Qt5\344\270\273\347\252\227\344\275\223", 0));
-        QTreeWidgetItem *___qtreewidgetitem11 = ___qtreewidgetitem10->child(0);
-        ___qtreewidgetitem11->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\347\211\207\346\265\217\350\247\210\345\231\250", 0));
-        QTreeWidgetItem *___qtreewidgetitem12 = ___qtreewidgetitem10->child(1);
-        ___qtreewidgetitem12->setText(0, QApplication::translate("Qt5DemosDlg", "\346\226\207\345\255\227\345\244\204\347\220\206\345\231\250", 0));
-        QTreeWidgetItem *___qtreewidgetitem13 = ___qtreewidgetitem10->child(2);
+        QTreeWidgetItem *___qtreewidgetitem13 = ___qtreewidgetitem8->child(4);
         ___qtreewidgetitem13->setText(0, QApplication::translate("Qt5DemosDlg", "\345\233\276\345\205\203\347\232\204\346\227\213\350\275\254\343\200\201\347\274\251\346\224\276\347\255\211\345\217\230\346\215\242", 0));
         Qt5DemosWidget->setSortingEnabled(__sortingEnabled);
 

@@ -10,7 +10,6 @@
 #include "../QtImageView/QtImageView.h"
 #include "../QtWordProcessor/QtWordProcessor.h"
 #include "../Paint/PaintWindow.h"
-#include "../Draw/DrawWindow.h"
 #include "../GraphicsItems/MainWindow.h"
 #include "ui_Qt5DemosDlg.h"
 #include <QTreeWidgetItem>
@@ -91,11 +90,6 @@ void Qt5DemosDlg::on_Qt5DemosWidget_itemClicked(QTreeWidgetItem *item, int colum
 	{
 		PaintWindow *paintWin = new PaintWindow(this);
 		paintWin->show();
-	}
-	else if (itemText == "绘画")
-	{
-		DrawWindow *drawWin = new DrawWindow(this);
-		drawWin->show();
 	}
 	else if (itemText == "图元的旋转、缩放等变换")
 	{
